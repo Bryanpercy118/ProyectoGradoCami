@@ -46,15 +46,19 @@ Route::middleware(['auth'])->group(function () {
 });
 
 // Asignaturas
-Route::resource('asignaturas', SubjectController::class)->names([
-    'index' => 'asignaturas.index',
-    'create' => 'asignaturas.create',
-    'store' => 'asignaturas.store',
-    'show' => 'asignaturas.show',
-    'edit' => 'asignaturas.edit',
-    'update' => 'asignaturas.update',
-    'destroy' => 'asignaturas.destroy',
-]);
+Route::middleware(['auth'])->group(function () {
+    Route::resource('asignaturas', SubjectController::class)
+        ->parameters(['asignaturas' => 'subject']) // <-- clave para binding con $subject
+        ->names([
+            'index'   => 'asignaturas.index',
+            'create'  => 'asignaturas.create',
+            'store'   => 'asignaturas.store',
+            'show'    => 'asignaturas.show',
+            'edit'    => 'asignaturas.edit',
+            'update'  => 'asignaturas.update',
+            'destroy' => 'asignaturas.destroy',
+        ]);
+});
 
 Route::get('/preinscripciones', [PreinscripcionController::class, 'index'])->name('preinscripciones.index');
 Route::post('/preinscripciones', [PreinscripcionController::class, 'store'])->name('preinscripciones.store');
@@ -104,7 +108,11 @@ Route::post('/periodos', [PeriodoController::class, 'store'])->name('periodos.st
 Route::put('/periodos/{periodo}', [PeriodoController::class, 'update'])->name('periodos.update');
 Route::delete('/periodos/{periodo}', [PeriodoController::class, 'destroy'])->name('periodos.destroy');
 
-Route::resource('asignaciones', AsignacionController::class);
+Route::middleware(['auth'])->group(function () {
+    Route::resource('asignaciones', AsignacionController::class)
+        ->parameters(['asignaciones' => 'asignacion'])
+        ->names('asignaciones');
+});
 
 Route::middleware(['auth'])->group(function () {
     Route::get('/documentos-medicos', [MedicalDocumentController::class, 'index'])->name('meddocs.index');

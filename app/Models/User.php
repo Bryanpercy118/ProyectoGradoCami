@@ -29,17 +29,7 @@ class User extends Authenticatable
         'active' => 'boolean', 
     ];
 
-    protected $appends = ['photo'];
-
-    public function getPhotoUrlAttribute()
-    {
-        if ($this->foto !== null) {
-            return url('media/user/' . $this->id . '/' . $this->foto);
-        } else {
-            return url('media-example/no-image.png');
-        }
-    }
-
+   
      // Relaciones académicas:
 
       // Notas donde este usuario ES alumno

@@ -18,36 +18,6 @@ class SideMenu
                     'layout' => 'side-menu',
                 ],
                 'title' => 'Dashboard'
-                // 'sub_menu' => [
-                //     'dashboard-overview-1' => [
-                //         'icon' => '',
-                        
-                //     ],
-                //     'dashboard-overview-2' => [
-                //         'icon' => '',
-                //         'route_name' => 'dashboard-overview-2',
-                //         'params' => [
-                //             'layout' => 'side-menu',
-                //         ],
-                //         'title' => 'Overview 2'
-                //     ],
-                //     'dashboard-overview-3' => [
-                //         'icon' => '',
-                //         'route_name' => 'dashboard-overview-3',
-                //         'params' => [
-                //             'layout' => 'side-menu',
-                //         ],
-                //         'title' => 'Overview 3'
-                //     ],
-                //     'dashboard-overview-4' => [
-                //         'icon' => '',
-                //         'route_name' => 'dashboard-overview-4',
-                //         'params' => [
-                //             'layout' => 'side-menu',
-                //         ],
-                //         'title' => 'Overview 4'
-                //     ]
-                // ]
             ],
             'inbox' => [
                 'icon' => 'inbox',
@@ -59,7 +29,7 @@ class SideMenu
             ],
             'file-manager' => [
                 'icon' => 'hard-drive',
-                'route_name' => 'file-manager',
+                'route_name' => 'asignaturas.index',
                 'params' => [
                     'layout' => 'side-menu'
                 ],
@@ -98,22 +68,6 @@ class SideMenu
                 ],
                 'title' => 'Gestion de Periodos'
             ],
-            'asignaturas' => [
-                'icon' => 'message-square',
-                'route_name' => 'file-manager',
-                'params' => [
-                    'layout' => 'side-menu'
-                ],
-                'title' => 'Gestion de Asignaturas'
-            ],
-            // 'post' => [
-            //     'icon' => 'file-text',
-            //     'route_name' => 'post',
-            //     'params' => [
-            //         'layout' => 'side-menu'
-            //     ],
-            //     'title' => 'Post'
-            // ],
             'calendar' => [
                 'icon' => 'calendar',
                 'route_name' => 'matriculas.index',

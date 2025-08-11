@@ -9,28 +9,35 @@ class SubjectController extends Controller
 {
     public function index()
     {
-        return Subject::all();
+        $asignaturas = Subject::orderByDesc('id')->get();
+        return view('pages/asignaturas.index', compact('asignaturas'));
     }
 
     public function store(Request $request)
     {
-        $request->validate([
-            'nombre' => 'required',
-            'descripcion' => 'nullable'
+        $data = $request->validate([
+            'nombre'      => ['required','string','max:255'],
+            'descripcion' => ['nullable','string'],
         ]);
 
-        return Subject::create($request->all());
+        $subject = Subject::create($data);
+        return response()->json($subject, 201);
     }
 
     public function show(Subject $subject)
     {
-        return $subject;
+        return response()->json($subject);
     }
 
     public function update(Request $request, Subject $subject)
     {
-        $subject->update($request->all());
-        return $subject;
+        $data = $request->validate([
+            'nombre'      => ['required','string','max:255'],
+            'descripcion' => ['nullable','string'],
+        ]);
+
+        $subject->update($data);
+        return response()->json($subject->fresh());
     }
 
     public function destroy(Subject $subject)
