@@ -62,19 +62,15 @@ class PageController extends Controller
         return view('pages/dashboard-overview-4');
     }
 
-    /**
-     * Show specified view.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
+    
     public function inbox()
     {
-        $docentes = Teacher::with('salon')->get();
-        $salones = Salon::all(); // Para el formulario
+        $docentes = User::role('profesor')
+            ->get();
 
-        return view('pages.docentes', compact('docentes', 'salones'));
+        return view('pages.docentes', compact('docentes'));
     }
+
 
     /**
      * Show specified view.

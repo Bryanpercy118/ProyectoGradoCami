@@ -31,15 +31,19 @@ Route::resource('salones', SalonController::class)->names([
 ]);
 
 // Docentes
-Route::resource('docentes', TeacherController::class)->names([
-    'index' => 'docentes.index',
-    'create' => 'docentes.create',
-    'store' => 'docentes.store',
-    'show' => 'docentes.show',
-    'edit' => 'docentes.edit',
-    'update' => 'docentes.update',
-    'destroy' => 'docentes.destroy',
-]);
+Route::middleware(['auth'])->group(function () {
+    Route::resource('docentes', TeacherController::class)
+        ->parameters(['docentes' => 'profesor'])
+        ->names([
+            'index'   => 'docentes.index',
+            'create'  => 'docentes.create',
+            'store'   => 'docentes.store',
+            'show'    => 'docentes.show',
+            'edit'    => 'docentes.edit',
+            'update'  => 'docentes.update',
+            'destroy' => 'docentes.destroy',
+        ]);
+});
 
 // Asignaturas
 Route::resource('asignaturas', SubjectController::class)->names([

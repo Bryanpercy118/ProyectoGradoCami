@@ -19,42 +19,18 @@ class User extends Authenticatable
      * @var array<int, string>
      */
     protected $fillable = [
-        'name',
-        'email',
-        'password',
+        'name', 'email', 'password', 'gender', 'active', 
     ];
 
-    /**
-     * The attributes that should be hidden for serialization.
-     *
-     * @var array<int, string>
-     */
-    protected $hidden = [
-        'password',
-        'remember_token',
-    ];
+    protected $hidden = ['password','remember_token'];
 
-    /**
-     * The attributes that should be cast.
-     *
-     * @var array<string, string>
-     */
     protected $casts = [
         'email_verified_at' => 'datetime',
+        'active' => 'boolean', 
     ];
 
-    /**
-     * The attributes that appends to returned entities.
-     *
-     * @var array
-     */
     protected $appends = ['photo'];
 
-    /**
-     * The getter that return accessible URL for user photo.
-     *
-     * @var array
-     */
     public function getPhotoUrlAttribute()
     {
         if ($this->foto !== null) {
