@@ -40,13 +40,6 @@
                             <div id="error-password" class="login__input-error text-danger mt-2"></div>
                         </form>
                     </div>
-                    <div class="intro-x flex text-slate-600 dark:text-slate-500 text-xs sm:text-sm mt-4">
-                        <div class="flex items-center mr-auto">
-                            <input id="remember-me" type="checkbox" class="form-check-input border mr-2">
-                            <label class="cursor-pointer select-none" for="remember-me">Recordarme</label>
-                        </div>
-                        <a href="">¿Olvidaste tu contraseña?</a>
-                    </div>
                     <div class="intro-x mt-5 xl:mt-8 text-center xl:text-left">
                         <button id="btn-login" class="btn btn-primary py-3 px-4 w-full xl:w-32 xl:mr-3 align-top">Entrar</button>
                         <button class="btn btn-outline-secondary py-3 px-4 w-full xl:w-32 mt-3 xl:mt-0 align-top">Registrarse</button>
