@@ -6,12 +6,12 @@ use Illuminate\Http\Request;
 class LandingController extends Controller
 {
     public function index()
-{
-    if (auth()->check()) {
-        return redirect()->route('dashboard-overview-1');
-    }
+    {
+        if (auth()->check()) {
+            return redirect()->route('dashboard-overview-1');
+        }
 
-    return view('index');
-}
+        return view('index');
+    }
 
 }

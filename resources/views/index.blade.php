@@ -6,26 +6,34 @@
     <title>Colegio Salomon del Norte</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <!-- Agrega esto en tu layout (head) o en esta vista -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
+
 </head>
 <body class="font-sans bg-gray-50">
     <!-- Navigation -->
-    <nav class="bg-blue-800 text-white shadow-lg">
+    <nav class="bg-white text-black shadow-lg">
         <div class="container mx-auto px-6 py-3">
             <div class="flex justify-between items-center">
                 <div class="flex items-center space-x-4">
                     <div class="flex items-center">
-                        <i class="fas fa-graduation-cap text-2xl mr-2"></i>
-                        <span class="font-bold text-xl">Colegio Salomon del Norte</span>
+                        <img alt="Logo Colegio Salomón" class="w-28" src="{{ asset('build/assets/images/col.png') }}">
+                        <span class="font-bold text-xl ml-4">Colegio Salomon del Norte</span>
                     </div>
                 </div>
-                <div class="hidden md:flex items-center space-x-8">
-                    <a href="#" class="hover:text-blue-200">Inicio</a>
-                    {{-- <a href="#" class="hover:text-blue-200">Acerca de</a>
-                    <a href="#" class="hover:text-blue-200">Académicos</a> --}}
-                    <a href="/inscripcion" class="hover:text-blue-200">Admisiones</a>
-                    {{-- <a href="#" class="hover:text-blue-200">Eventos</a>
-                    <a href="#" class="hover:text-blue-200">Contacto</a> --}}
+               <div class="hidden md:flex items-center space-x-4 text-black ml-10">
+                    <a href="/colsanor/home" class="px-4 py-2 rounded-md hover:bg-blue-600 hover:text-white hover:font-bold transition">
+                        Inicio
+                    </a>
+                    <a href="/inscripcion" class="px-4 py-2 rounded-md hover:bg-blue-600 hover:text-white hover:font-bold transition">
+                        Admisiones
+                    </a>
+                    <a href="/login" class="px-4 py-2 rounded-md hover:bg-red-600 hover:text-white hover:font-bold transition">
+                        Iniciar Sesión
+                    </a>
                 </div>
+
                 <div class="md:hidden">
                     <button class="mobile-menu-button">
                         <i class="fas fa-bars text-xl"></i>
@@ -36,20 +44,77 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="bg-gradient-to-r from-blue-700 to-blue-900 text-white py-20">
-        <div class="container mx-auto px-6 text-center">
-            <h1 class="text-4xl md:text-6xl font-bold mb-6">Bienvenido a Colegio Salomon del Norte</h1>
-            <p class="text-xl md:text-2xl mb-8">Excelencia en Educación Desde 2012</p>
-            <div class="flex flex-col md:flex-row justify-center gap-4">
-                <button class="bg-white text-blue-800 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition duration-300">
-                    Aplicar Ahora
-                </button>
-                <button class="border-2 border-white px-8 py-3 rounded-lg font-bold hover:bg-white hover:text-blue-800 transition duration-300">
-                    Más Información
-                </button>
+    <!-- Carrusel a ancho completo -->
+    <section class="w-full bg-white">
+        <div class="swiper mySwiper w-full">
+            <div class="swiper-wrapper">
+                <!-- Imagen 1 -->
+                <div class="swiper-slide relative">
+                    <!-- Imagen -->
+                    <img src="{{ asset('build/assets/images/img-1.jpeg') }}" alt="Bienvenida 1"
+                        class="w-full h-[500px] object-cover">
+
+                    <!-- Overlay oscuro -->
+                    <div class="absolute inset-0 bg-black/50"></div>
+
+                    <!-- Texto centrado -->
+                    <div class="absolute inset-0 flex flex-col items-center justify-center text-center text-white px-6">
+                        <h2 class="text-4xl md:text-5xl font-bold">Colegio Salomón del Norte</h2>
+                        <p class="mt-4 text-lg md:text-xl max-w-2xl">
+                            Inspirando excelencia académica y valores que trascienden.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Imagen 2 -->
+                <div class="swiper-slide relative">
+                    <img src="{{ asset('build/assets/images/img-2.jpeg') }}" alt="Bienvenida 2"
+                        class="w-full h-[500px] object-cover">
+
+                    <!-- Overlay oscuro -->
+                    <div class="absolute inset-0 bg-black/50"></div>
+
+                    <!-- Texto -->
+                    <div class="absolute inset-0 flex flex-col items-center justify-center text-center text-white px-6">
+                        <h2 class="text-4xl md:text-5xl font-bold">Aprendizaje Integral</h2>
+                        <p class="mt-4 text-lg md:text-xl max-w-2xl">
+                            Fomentamos el desarrollo académico, social y humano de cada estudiante.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Imagen 3 -->
+                <div class="swiper-slide relative">
+                    <img src="{{ asset('build/assets/images/img-3.jpeg') }}" alt="Bienvenida 3"
+                        class="w-full h-[500px] object-cover">
+
+                    <!-- Overlay oscuro -->
+                    <div class="absolute inset-0 bg-black/50"></div>
+
+                    <!-- Texto -->
+                    <div class="absolute inset-0 flex flex-col items-center justify-center text-center text-white px-6">
+                        <h2 class="text-4xl md:text-5xl font-bold">Valores que Inspiran</h2>
+                        <p class="mt-4 text-lg md:text-xl max-w-2xl">
+                            Educamos con principios sólidos para formar líderes con propósito.
+                        </p>
+                    </div>
+                </div>
+
             </div>
+
+            <!-- Controles -->
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next text-blue-800"></div>
+            <div class="swiper-button-prev text-blue-800"></div>
         </div>
     </section>
+
+    <section class="py-2 bg-blue-300 text-white">
+        <div class="container mx-auto px-6 text-center">
+         
+        </div>
+    </section>
+
 
     <!-- About Section -->
     <section class="py-16 bg-white">
@@ -60,34 +125,23 @@
                     <img src="https://images.unsplash.com/photo-1588072432836-e10032774350" alt="School Building" class="rounded-lg shadow-xl w-full">
                 </div>
                 <div class="md:w-1/2">
-                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">Nuestra Misión</h3>
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">Misión</h3>
                     <p class="text-gray-600 mb-6">
                         El Colegio Salomon del Norte se compromete a proporcionar un entorno de apoyo que fomente la excelencia académica,
                         el crecimiento personal y la responsabilidad social. Empoderamos a los estudiantes para que se conviertan en aprendices de por vida y ciudadanos globales responsables.
                     </p>
-                    <div class="grid grid-cols-2 gap-4">
-                        <div class="bg-blue-50 p-4 rounded-lg">
-                            <h4 class="font-bold text-blue-800 mb-2">Establecido</h4>
-                            <p>1985</p>
-                        </div>
-                        <div class="bg-blue-50 p-4 rounded-lg">
-                            <h4 class="font-bold text-blue-800 mb-2">Estudiantes</h4>
-                            <p>1,200+</p>
-                        </div>
-                        <div class="bg-blue-50 p-4 rounded-lg">
-                            <h4 class="font-bold text-blue-800 mb-2">Personal</h4>
-                            <p>85+</p>
-                        </div>
-                        <div class="bg-blue-50 p-4 rounded-lg">
-                            <h4 class="font-bold text-blue-800 mb-2">Cursos</h4>
-                            <p>15+</p>
-                        </div>
-                    </div>
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">Visión</h3>
+                    <p class="text-gray-600 mb-6">
+                        El Colegio Salomon del Norte se compromete a proporcionar un entorno de apoyo que fomente la excelencia académica,
+                        el crecimiento personal y la responsabilidad social. Empoderamos a los estudiantes para que se conviertan en aprendices de por vida y ciudadanos globales responsables.
+                    </p>
+                    
                 </div>
             </div>
         </div>
     </section>
 
+    
     <!-- Academics Section -->
     <section class="py-16 bg-gray-100">
         <div class="container mx-auto px-6">
@@ -102,7 +156,6 @@
                     <p class="text-gray-600 mb-4">
                         Nuestro programa de educación primaria se centra en las habilidades fundamentales en lectura, escritura y matemáticas, al tiempo que fomenta la curiosidad y la creatividad.
                     </p>
-                    <a href="#" class="text-blue-600 font-semibold hover:underline">Más Información →</a>
                 </div>
                 
                 <!-- Middle School -->
@@ -114,7 +167,6 @@
                     <p class="text-gray-600 mb-4">
                         Nuestro plan de estudios de escuela secundaria desafía a los estudiantes académicamente mientras proporciona sistemas de apoyo sólidos durante estos años de transición.
                     </p>
-                    <a href="#" class="text-blue-600 font-semibold hover:underline">Más Información →</a>
                 </div>
                 
                 <!-- High School -->
@@ -126,69 +178,7 @@
                     <p class="text-gray-600 mb-4">
                         Nuestro programa integral de escuela secundaria incluye cursos AP, trayectorias profesionales y preparación universitaria para garantizar el éxito de los estudiantes.
                     </p>
-                    <a href="#" class="text-blue-600 font-semibold hover:underline">Más Información →</a>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Events Section -->
-    <section class="py-16 bg-white">
-        <div class="container mx-auto px-6">
-            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Próximos Eventos</h2>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- Event 1 -->
-                <div class="border border-gray-200 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition duration-300">
-                    <img src="https://images.unsplash.com/photo-1541178735493-479c1a27ed24" alt="Science Fair" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <div class="flex justify-between items-center mb-2">
-                            <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded">Ciencia</span>
-                            <span class="text-sm text-gray-500">15 de mayo de 2023</span>
-                        </div>
-                        <h3 class="text-xl font-bold mb-2">Feria Anual de Ciencias</h3>
-                        <p class="text-gray-600 mb-4">
-                            Los estudiantes muestran sus proyectos innovadores en nuestra feria anual de ciencias. Abierto al público.
-                        </p>
-                        <button class="text-blue-600 font-semibold hover:underline">Más Información →</button>
-                    </div>
-                </div>
-                
-                <!-- Event 2 -->
-                <div class="border border-gray-200 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition duration-300">
-                    <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87" alt="Sports Day" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <div class="flex justify-between items-center mb-2">
-                            <span class="bg-green-100 text-green-800 text-xs font-semibold px-2.5 py-0.5 rounded">Deportes</span>
-                            <span class="text-sm text-gray-500">2 de junio de 2023</span>
-                        </div>
-                        <h3 class="text-xl font-bold mb-2">Día de Deportes</h3>
-                        <p class="text-gray-600 mb-4">
-                            Competencia anual de deportes entre casas. ¡Ven a animar a tu equipo favorito!
-                        </p>
-                        <button class="text-blue-600 font-semibold hover:underline">Más Información →</button>
-                    </div>
-                </div>
-                
-                <!-- Event 3 -->
-                <div class="border border-gray-200 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition duration-300">
-                    <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173" alt="Graduation" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <div class="flex justify-between items-center mb-2">
-                            <span class="bg-purple-100 text-purple-800 text-xs font-semibold px-2.5 py-0.5 rounded">Graduación</span>
-                            <span class="text-sm text-gray-500">15 de junio de 2023</span>
-                        </div>
-                        <h3 class="text-xl font-bold mb-2">Graduación de la Clase de 2023</h3>
-                        <p class="text-gray-600 mb-4">
-                            Celebra los logros de nuestros estudiantes de último año en esta ceremonia especial.
-                        </p>
-                        <button class="text-blue-600 font-semibold hover:underline">Más Información →</button>
-                    </div>
-                </div>
-            </div>
-            <div class="text-center mt-10">
-                <button class="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition duration-300">
-                    Ver Todos los Eventos
-                </button>
             </div>
         </div>
     </section>
@@ -210,14 +200,13 @@
                         </div>
                     </div>
                     <p class="text-gray-600 italic mb-6">
-                        "Greenwood High ha brindado a mi hijo una educación excepcional y numerosas oportunidades 
-                        para el crecimiento personal. Los maestros son dedicados y realmente se preocupan por el éxito de cada estudiante."
+                        "Estamos muy agradecidos con el Colegio Salomón. Mi hija ha crecido en confianza, responsabilidad y amor por el aprendizaje. ¡100% recomendado!"
                     </p>
                     <div class="flex items-center">
-                        <img src="https://randomuser.me/api/portraits/women/43.jpg" alt="Sarah Johnson" class="w-12 h-12 rounded-full mr-4">
+                        {{-- <img src="https://randomuser.me/api/portraits/women/43.jpg" alt="Sarah Johnson" class="w-12 h-12 rounded-full mr-4"> --}}
                         <div>
-                            <h4 class="font-semibold">Sarah Johnson</h4>
-                            <p class="text-gray-500 text-sm">Padre de un estudiante de 8º grado</p>
+                            <h4 class="font-semibold">Maria Rosado</h4>
+                            <p class="text-gray-500 text-sm">Padre de una estudiante de 3º grado</p>
                         </div>
                     </div>
                 </div>
@@ -234,14 +223,13 @@
                         </div>
                     </div>
                     <p class="text-gray-600 italic mb-6">
-                        "El programa AP en Greenwood me preparó extremadamente bien para la universidad. Entré a la universidad con 
-                        15 créditos y me sentí por delante de muchos de mis compañeros. Los maestros te desafían pero también te apoyan."
+                        "El Colegio Salomón ha sido una bendición para mi hijo. La formación académica y los valores que promueven hacen la diferencia. ¡Excelente institución!"
                     </p>
                     <div class="flex items-center">
-                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Michael Chen" class="w-12 h-12 rounded-full mr-4">
+                        {{-- <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Michael Chen" class="w-12 h-12 rounded-full mr-4"> --}}
                         <div>
-                            <h4 class="font-semibold">Michael Chen</h4>
-                            <p class="text-gray-500 text-sm">Clase de 2022</p>
+                            <h4 class="font-semibold">Michael Gonzales</h4>
+                            <p class="text-gray-500 text-sm">Padre de un estudiante de 1º grado</p>
                         </div>
                     </div>
                 </div>
@@ -256,14 +244,14 @@
             <p class="text-xl mb-8 max-w-2xl mx-auto">
                 Programa una visita o comienza el proceso de admisión hoy. Nuestro equipo de admisiones está listo para responder tus preguntas.
             </p>
-            <div class="flex flex-col md:flex-row justify-center gap-4">
+            {{-- <div class="flex flex-col md:flex-row justify-center gap-4">
                 <button class="bg-white text-blue-800 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition duration-300">
                     Aplicar Ahora
                 </button>
                 <button class="border-2 border-white px-8 py-3 rounded-lg font-bold hover:bg-white hover:text-blue-800 transition duration-300">
                     Contáctanos
                 </button>
-            </div>
+            </div> --}}
         </div>
     </section>
 
@@ -289,16 +277,13 @@
                 <div>
                     <h3 class="text-xl font-bold mb-4">Enlaces Rápidos</h3>
                     <ul class="space-y-2">
-                        <li><a href="#" class="text-gray-400 hover:text-white">Calendario</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white">Directorio de Personal</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white">Menú del Almuerzo</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white">Portal de Padres</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white">Portal de Estudiantes</a></li>
+                        <li><a href="/inscripcion" class="text-gray-400 hover:text-white">Adminisiones</a></li>
+                        <li><a href="/login" class="text-gray-400 hover:text-white">Nuestra Plataforma</a></li>
                     </ul>
                 </div>
                 
                 <!-- Resources -->
-                <div>
+                {{-- <div>
                     <h3 class="text-xl font-bold mb-4">Recursos</h3>
                     <ul class="space-y-2">
                         <li><a href="#" class="text-gray-400 hover:text-white">Biblioteca</a></li>
@@ -307,10 +292,10 @@
                         <li><a href="#" class="text-gray-400 hover:text-white">Consejería</a></li>
                         <li><a href="#" class="text-gray-400 hover:text-white">Alumno</a></li>
                     </ul>
-                </div>
+                </div> --}}
                 
                 <!-- Social Media -->
-                <div>
+                {{-- <div>
                     <h3 class="text-xl font-bold mb-4">Conéctate con Nosotros</h3>
                     <div class="flex space-x-4 mb-6">
                         <a href="#" class="text-gray-400 hover:text-white text-2xl"><i class="fab fa-facebook"></i></a>
@@ -326,7 +311,7 @@
                             <i class="fas fa-paper-plane"></i>
                         </button>
                     </div>
-                </div>
+                </div> --}}
             </div>
             <div class="border-t border-gray-800 mt-8 pt-6 text-center text-gray-400">
                 <p>&copy; 2025 Colegio Salomon Norte. All rights reserved.</p>
@@ -343,5 +328,28 @@
             mobileMenu.classList.toggle('hidden');
         });
     </script>
+    <!-- CDN Swiper (Head) -->
+
+    <!-- Swiper Script (final del body o @section('script')) -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script>
+    const swiper = new Swiper(".mySwiper", {
+        loop: true,
+        autoplay: {
+        delay: 3500,
+        disableOnInteraction: false,
+        },
+        pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+        },
+        navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+        },
+    });
+    </script>
+
+
 </body>
 </html>

@@ -10,15 +10,32 @@
 
 <body class="bg-gray-50 font-sans text-gray-800">
     <!-- Navbar -->
-    <nav class="bg-blue-800 text-white shadow-lg">
-        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
-            <div class="flex items-center space-x-4">
-                <i class="fas fa-graduation-cap text-2xl"></i>
-                <span class="font-bold text-xl">Colegio Salomon del Norte</span>
-            </div>
-            <div class="hidden md:flex space-x-6">
-                <a href="/" class="hover:text-blue-200">Inicio</a>
-                <a href="/inscripcion" class="hover:text-blue-200 underline font-semibold">Admisiones</a>
+    <nav class="bg-white text-black shadow-lg">
+        <div class="container mx-auto px-6 py-3">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-4">
+                    <div class="flex items-center">
+                        <img alt="Logo Colegio Salomón" class="w-28" src="{{ asset('build/assets/images/col.png') }}">
+                        <span class="font-bold text-xl ml-4">Colegio Salomon del Norte</span>
+                    </div>
+                </div>
+               <div class="hidden md:flex items-center space-x-4 text-black ml-10">
+                    <a href="/colsanor/home" class="px-4 py-2 rounded-md hover:bg-blue-600 hover:text-white hover:font-bold transition">
+                        Inicio
+                    </a>
+                    <a href="/inscripcion" class="px-4 py-2 rounded-md hover:bg-blue-600 hover:text-white hover:font-bold transition">
+                        Admisiones
+                    </a>
+                    <a href="/login" class="px-4 py-2 rounded-md hover:bg-red-600 hover:text-white hover:font-bold transition">
+                        Iniciar Sesión
+                    </a>
+                </div>
+
+                <div class="md:hidden">
+                    <button class="mobile-menu-button">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
             </div>
         </div>
     </nav>
@@ -202,28 +219,34 @@
     </div>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-white pt-12 pb-6">
+   <footer class="bg-gray-900 text-white pt-12 pb-6">
         <div class="container mx-auto px-6">
             <div class="grid md:grid-cols-4 gap-8">
+                <!-- School Info -->
                 <div>
                     <h3 class="text-xl font-bold mb-4">Colegio Salomon del Norte</h3>
-                    <p class="text-gray-400 mb-4">123 Education Avenue<br> Springfield, ST 12345</p>
+                    <p class="text-gray-400 mb-4">
+                        123 Education Avenue<br>
+                        Springfield, ST 12345<br>
+                        United States
+                    </p>
                     <p class="text-gray-400 mb-4">
                         <i class="fas fa-phone-alt mr-2"></i> (555) 123-4567<br>
                         <i class="fas fa-envelope mr-2"></i> info@colegiosalomon.edu
                     </p>
                 </div>
+                
+                <!-- Quick Links -->
                 <div>
                     <h3 class="text-xl font-bold mb-4">Enlaces Rápidos</h3>
                     <ul class="space-y-2">
-                        <li><a href="#" class="text-gray-400 hover:text-white">Calendario</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white">Directorio</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white">Menú</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white">Padres</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white">Estudiantes</a></li>
+                        <li><a href="/inscripcion" class="text-gray-400 hover:text-white">Adminisiones</a></li>
+                        <li><a href="/login" class="text-gray-400 hover:text-white">Nuestra Plataforma</a></li>
                     </ul>
                 </div>
-                <div>
+                
+                <!-- Resources -->
+                {{-- <div>
                     <h3 class="text-xl font-bold mb-4">Recursos</h3>
                     <ul class="space-y-2">
                         <li><a href="#" class="text-gray-400 hover:text-white">Biblioteca</a></li>
@@ -232,9 +255,11 @@
                         <li><a href="#" class="text-gray-400 hover:text-white">Consejería</a></li>
                         <li><a href="#" class="text-gray-400 hover:text-white">Alumno</a></li>
                     </ul>
-                </div>
-                <div>
-                    <h3 class="text-xl font-bold mb-4">Conéctate</h3>
+                </div> --}}
+                
+                <!-- Social Media -->
+                {{-- <div>
+                    <h3 class="text-xl font-bold mb-4">Conéctate con Nosotros</h3>
                     <div class="flex space-x-4 mb-6">
                         <a href="#" class="text-gray-400 hover:text-white text-2xl"><i class="fab fa-facebook"></i></a>
                         <a href="#" class="text-gray-400 hover:text-white text-2xl"><i class="fab fa-twitter"></i></a>
@@ -249,7 +274,7 @@
                             <i class="fas fa-paper-plane"></i>
                         </button>
                     </div>
-                </div>
+                </div> --}}
             </div>
             <div class="border-t border-gray-800 mt-8 pt-6 text-center text-gray-400">
                 <p>&copy; 2025 Colegio Salomon Norte. All rights reserved.</p>

@@ -98,7 +98,7 @@ Route::get('/alumno', [DashboardController::class, 'index'])->name('alumno.dashb
 
 
 Route::get('/inscripcion', [AspiranteController::class, 'index'])->name('aspirantes.indexa');
-Route::get('/', [LandingController::class, 'index'])->name('landing');
+Route::get('/colsanor/home', [LandingController::class, 'index'])->name('landing');
 
 // RUTAS PARA PERIODOS
 
