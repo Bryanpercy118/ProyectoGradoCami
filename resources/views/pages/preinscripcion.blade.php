@@ -224,15 +224,16 @@
             <div class="grid md:grid-cols-4 gap-8">
                 <!-- School Info -->
                 <div>
-                    <h3 class="text-xl font-bold mb-4">Colegio Salomon del Norte</h3>
+
+                    
+                    <h3 class="text-xl font-bold mb-4"> Valledupar/Cesar</h3>
                     <p class="text-gray-400 mb-4">
-                        123 Education Avenue<br>
-                        Springfield, ST 12345<br>
-                        United States
+                       Dirección: Calle 11 # 21 <br>
+                        04 Barrio Iracal<br>
                     </p>
                     <p class="text-gray-400 mb-4">
-                        <i class="fas fa-phone-alt mr-2"></i> (555) 123-4567<br>
-                        <i class="fas fa-envelope mr-2"></i> info@colegiosalomon.edu
+                        <i class="fas fa-phone-alt mr-2"></i> Teléfono: 605-5704760  <br>
+                        <i class="fas fa-envelope mr-2"></i> rectoria@salomondelnorte.edu.co
                     </p>
                 </div>
                 
@@ -244,37 +245,6 @@
                         <li><a href="/login" class="text-gray-400 hover:text-white">Nuestra Plataforma</a></li>
                     </ul>
                 </div>
-                
-                <!-- Resources -->
-                {{-- <div>
-                    <h3 class="text-xl font-bold mb-4">Recursos</h3>
-                    <ul class="space-y-2">
-                        <li><a href="#" class="text-gray-400 hover:text-white">Biblioteca</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white">Atletismo</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white">Clubes</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white">Consejería</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white">Alumno</a></li>
-                    </ul>
-                </div> --}}
-                
-                <!-- Social Media -->
-                {{-- <div>
-                    <h3 class="text-xl font-bold mb-4">Conéctate con Nosotros</h3>
-                    <div class="flex space-x-4 mb-6">
-                        <a href="#" class="text-gray-400 hover:text-white text-2xl"><i class="fab fa-facebook"></i></a>
-                        <a href="#" class="text-gray-400 hover:text-white text-2xl"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="text-gray-400 hover:text-white text-2xl"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="text-gray-400 hover:text-white text-2xl"><i class="fab fa-youtube"></i></a>
-                        <a href="#" class="text-gray-400 hover:text-white text-2xl"><i class="fab fa-linkedin"></i></a>
-                    </div>
-                    <h4 class="font-bold mb-2">Newsletter</h4>
-                    <div class="flex">
-                        <input type="email" placeholder="Your email" class="px-4 py-2 rounded-l-lg text-gray-900 w-full">
-                        <button class="bg-blue-600 px-4 py-2 rounded-r-lg hover:bg-blue-700">
-                            <i class="fas fa-paper-plane"></i>
-                        </button>
-                    </div>
-                </div> --}}
             </div>
             <div class="border-t border-gray-800 mt-8 pt-6 text-center text-gray-400">
                 <p>&copy; 2025 Colegio Salomon Norte. All rights reserved.</p>

@@ -122,18 +122,27 @@
             <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Acerca de Nuestro Colegio</h2>
             <div class="flex flex-col md:flex-row items-center">
                 <div class="md:w-1/2 mb-8 md:mb-0 md:pr-8">
-                    <img src="https://images.unsplash.com/photo-1588072432836-e10032774350" alt="School Building" class="rounded-lg shadow-xl w-full">
+                    <img src="{{ asset('build/assets/images/img-4.jpeg') }}" alt="School Building" class="rounded-lg shadow-xl w-full">
                 </div>
                 <div class="md:w-1/2">
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">¿Quienes Somos?</h3>
+                    <p class="text-gray-600 mb-6">
+                       Somos una entidad educativa que atiende a niños y niñas regulares, con coeficiente superior y con toda clase de discapacidad, 
+                       y les brindamos la oportunidad de ser integrados en el aula de clase para recibir los servicios educativos que la institución ofrece: 
+                       Pre-escolar y Primaria, Educación Especial e Integración Escolar, Educación Bilingüe e Informática. Programas de Artes, música y deportes. 
+                       Formación en la ética y la moral.
+                    </p>
                     <h3 class="text-2xl font-semibold text-gray-800 mb-4">Misión</h3>
                     <p class="text-gray-600 mb-6">
-                        El Colegio Salomon del Norte se compromete a proporcionar un entorno de apoyo que fomente la excelencia académica,
-                        el crecimiento personal y la responsabilidad social. Empoderamos a los estudiantes para que se conviertan en aprendices de por vida y ciudadanos globales responsables.
+                       Somos una institución de carácter privado que brinda formación académica en los niveles de preescolar y básica primaria. A través de una metodología fortalecida en las inteligencias múltiples, axiológica y emocional para conseguir el aprendizaje significativo.
+                       En este proyecto inclusivo la institución acata y fortalece las directrices del Ministerio de Educación Nacional.
                     </p>
                     <h3 class="text-2xl font-semibold text-gray-800 mb-4">Visión</h3>
                     <p class="text-gray-600 mb-6">
-                        El Colegio Salomon del Norte se compromete a proporcionar un entorno de apoyo que fomente la excelencia académica,
-                        el crecimiento personal y la responsabilidad social. Empoderamos a los estudiantes para que se conviertan en aprendices de por vida y ciudadanos globales responsables.
+                        El colegio Salomón del Norte se proyecta como una institución de mejoramiento permanente en los procesos académicos, administrativos y organizacionales.
+                        Para llegar a ser un colegio vanguardista, apoyado en la tecnología, con un enfoque orientado hacia la excelencia académica y la implementación de los valores.
+                        Con el fin de conseguir una convivencia pacífica acorde con las exigencias del entorno circundante.
+                        Para proyectar a nuestros niños en la sociedad cambiante conforme a las enseñanzas de este método inclusivo y novedoso.
                     </p>
                     
                 </div>
@@ -142,46 +151,6 @@
     </section>
 
     
-    <!-- Academics Section -->
-    <section class="py-16 bg-gray-100">
-        <div class="container mx-auto px-6">
-            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Nuestra Academia</h2>
-            <div class="grid md:grid-cols-3 gap-8">
-                <!-- Elementary -->
-                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300">
-                    <div class="text-blue-600 mb-4">
-                        <i class="fas fa-pencil-alt text-4xl"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-3">Escuela Primaria</h3>
-                    <p class="text-gray-600 mb-4">
-                        Nuestro programa de educación primaria se centra en las habilidades fundamentales en lectura, escritura y matemáticas, al tiempo que fomenta la curiosidad y la creatividad.
-                    </p>
-                </div>
-                
-                <!-- Middle School -->
-                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300">
-                    <div class="text-blue-600 mb-4">
-                        <i class="fas fa-book text-4xl"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-3">Escuela Secundaria</h3>
-                    <p class="text-gray-600 mb-4">
-                        Nuestro plan de estudios de escuela secundaria desafía a los estudiantes académicamente mientras proporciona sistemas de apoyo sólidos durante estos años de transición.
-                    </p>
-                </div>
-                
-                <!-- High School -->
-                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300">
-                    <div class="text-blue-600 mb-4">
-                        <i class="fas fa-graduation-cap text-4xl"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-3">Escuela Secundaria</h3>
-                    <p class="text-gray-600 mb-4">
-                        Nuestro programa integral de escuela secundaria incluye cursos AP, trayectorias profesionales y preparación universitaria para garantizar el éxito de los estudiantes.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- Testimonials -->
     <section class="py-16 bg-blue-50">
@@ -261,15 +230,16 @@
             <div class="grid md:grid-cols-4 gap-8">
                 <!-- School Info -->
                 <div>
-                    <h3 class="text-xl font-bold mb-4">Colegio Salomon del Norte</h3>
+
+                    
+                    <h3 class="text-xl font-bold mb-4"> Valledupar/Cesar</h3>
                     <p class="text-gray-400 mb-4">
-                        123 Education Avenue<br>
-                        Springfield, ST 12345<br>
-                        United States
+                       Dirección: Calle 11 # 21 <br>
+                        04 Barrio Iracal<br>
                     </p>
                     <p class="text-gray-400 mb-4">
-                        <i class="fas fa-phone-alt mr-2"></i> (555) 123-4567<br>
-                        <i class="fas fa-envelope mr-2"></i> info@colegiosalomon.edu
+                        <i class="fas fa-phone-alt mr-2"></i> Teléfono: 605-5704760  <br>
+                        <i class="fas fa-envelope mr-2"></i> rectoria@salomondelnorte.edu.co
                     </p>
                 </div>
                 

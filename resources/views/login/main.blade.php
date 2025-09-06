@@ -6,7 +6,7 @@
 
 @section('content')
     <div class="container sm:px-10">
-        <div class="block xl:grid grid-cols-2 gap-4">
+        <div class="block xl:grid grid-cols-2 gap-4 ">
             <!-- INICIO: Información del Login -->
             <div class="hidden xl:flex flex-col min-h-screen">
                 {{-- <a href="" class="-intro-x flex items-center pt-5">
@@ -15,11 +15,15 @@
                         Colegio Salomón
                     </span>
                 </a> --}}
-                <div class="my-auto">
-                    <img alt="Ilustración de Inicio" class="-intro-x w-1/2 -mt-16" src="{{ asset('build/assets/images/col.png') }}">
-                    <div class="-intro-x text-white font-medium text-4xl leading-tight mt-10">Solo unos clics más <br> para acceder a tu cuenta.</div>
-                    <div class="-intro-x mt-5 text-lg text-white text-opacity-70 dark:text-slate-400">Gestiona todas tus cuentas educativas en un solo lugar</div>
-                </div>
+                <div class="my-auto ">
+                    <img alt="Ilustración de Inicio" class="-intro-x w-1/2 -mt-16 " src="{{ asset('build/assets/images/col.png') }}">
+                    <div class="-intro-x text-white font-medium text-xl leading-tight mt-10">Bienvenido al portal académico.  <br>
+                            Un espacio diseñado para fortalecer el aprendizaje y <br>
+                            la comunicación entre nuestra comunidad educativa.
+                    </div>
+                    <div class="-intro-x mt-5 text-sm text-white text-opacity-70 dark:text-slate-400">
+                        Conectando a estudiantes, docentes y familias en un mismo camino <br> hacia la excelencia académica</div>
+                    </div>
             </div>
             <!-- FIN: Información del Login -->
 
